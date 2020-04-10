@@ -11,6 +11,18 @@ type Person struct {
 	Age  int
 }
 
+func ExampleLoadFile_variable() {
+	t := &testing.T{}
+
+	me := LoadFile(t, "testdata/person.json")
+	fmt.Println(string(me))
+	// Output:
+	// {
+	//     "name": "Jesse Michael",
+	//     "age": 29
+	// }
+}
+
 func ExampleLoadJSONFile_variable() {
 	t := &testing.T{}
 
@@ -46,9 +58,9 @@ func TestLoadJSONFile(t *testing.T) {
 	}
 }
 
-func TestLoadJSONFile_FailToLoad(t *testing.T) {
+func TestLoadFile_FailToLoad(t *testing.T) {
 	tt := &testing.T{}
-	LoadJSONFile(tt, "testdata/notfound.json", &Person{})
+	LoadFile(tt, "testdata/notfound.json")
 	if !tt.Failed() {
 		t.Error("expected LoadJSONFile() to fail to load file")
 	}
