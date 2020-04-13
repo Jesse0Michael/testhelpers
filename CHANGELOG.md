@@ -1,3 +1,9 @@
+## [0.1.1](https://github.com/Jesse0Michael/testhelpers/compare/v0.1.0...v0.1.1) (2020-04-13)
+
+### Bug Fixes
+
+- git ignore ([ca4ab32](https://github.com/Jesse0Michael/testhelpers/commit/ca4ab326fedd30c70ee184c0067abfc81624cff7))
+
 # [0.1.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.0.0...v0.1.0) (2020-04-13)
 
 ### Features
