@@ -1,3 +1,9 @@
+# [0.2.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.1.2...v0.2.0) (2021-07-30)
+
+### Features
+
+- add path to test server ([b6dac80](https://github.com/Jesse0Michael/testhelpers/commit/b6dac80eaf3b61f87e92c051a1d1061cd997f27c))
+
 ## [0.1.2](https://github.com/Jesse0Michael/testhelpers/compare/v0.1.1...v0.1.2) (2020-04-25)
 
 ### Bug Fixes
