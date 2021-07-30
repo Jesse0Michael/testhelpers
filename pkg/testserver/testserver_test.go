@@ -60,7 +60,7 @@ func TestServer_handle(t *testing.T) {
 		Handler{Response: []byte("OK")},
 		Handler{Status: http.StatusConflict},
 		Handler{Path: "/rest", Status: http.StatusCreated, Response: []byte("rested")},
-		Handler{Path: "/rest", Status: http.StatusTeapot, Response: []byte("teapot")},
+		Handler{Path: "rest", Status: http.StatusTeapot, Response: []byte("teapot")},
 	)
 	defer testServer.Close()
 
