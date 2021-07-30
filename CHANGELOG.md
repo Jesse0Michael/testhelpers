@@ -1,3 +1,13 @@
+## [0.2.1](https://github.com/Jesse0Michael/testhelpers/compare/v0.2.0...v0.2.1) (2021-07-30)
+
+### Bug Fixes
+
+- handle concurrent requests and prefixed slashes ([5d834bf](https://github.com/Jesse0Michael/testhelpers/commit/5d834bf5fd6c750241ee5da6369c9bada2e08685))
+
+### Other
+
+- Merge branch 'master' of ssh://github.com/Jesse0Michael/testhelpers ([f7aad2b](https://github.com/Jesse0Michael/testhelpers/commit/f7aad2bc1864eb33bf7b5ac29edd785f3524f03d))
+
 # [0.2.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.1.2...v0.2.0) (2021-07-30)
 
 ### Features
