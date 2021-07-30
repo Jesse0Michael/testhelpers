@@ -55,22 +55,30 @@ func ExampleServer() {
 }
 
 func TestServer_handle(t *testing.T) {
-	testServer := New(Handler{Status: http.StatusCreated, Response: []byte("success")},
+	testServer := New(
+		Handler{Status: http.StatusCreated, Response: []byte("success")},
 		Handler{Response: []byte("OK")},
-		Handler{Status: http.StatusConflict})
+		Handler{Status: http.StatusConflict},
+		Handler{Path: "/rest", Status: http.StatusCreated, Response: []byte("rested")},
+		Handler{Path: "/rest", Status: http.StatusTeapot, Response: []byte("teapot")},
+	)
 	defer testServer.Close()
 
 	tests := []struct {
 		status int
 		body   string
+		path   string
 	}{
 		{status: 201, body: "success"},
+		{status: 201, body: "rested", path: "/rest"},
 		{status: 200, body: "OK"},
 		{status: 409, body: ""},
+		{status: 418, body: "teapot", path: "/rest"},
 		{status: 201, body: "success"},
+		{status: 201, body: "rested", path: "/rest"},
 	}
 	for _, tt := range tests {
-		resp, err := http.Get(testServer.URL)
+		resp, err := http.Get(testServer.URL + tt.path)
 		if err != nil {
 			t.Errorf("Unexpected server response failure = %v", err)
 		}
