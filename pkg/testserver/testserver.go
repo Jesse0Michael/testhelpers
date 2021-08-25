@@ -12,6 +12,7 @@ type Handler struct {
 	Path     string
 	Status   int
 	Response []byte
+	Headers  map[string]string
 }
 
 // Serve will create and serve this test handler from a new http test server
@@ -57,6 +58,9 @@ func (s *Server) handle() http.Handler {
 
 		s.Lock()
 		handler := handlers[s.index[path]]
+		for k, v := range handler.Headers {
+			w.Header().Add(k, v)
+		}
 		if handler.Status == 0 {
 			w.WriteHeader(http.StatusOK)
 		} else {
