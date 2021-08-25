@@ -1,3 +1,13 @@
+# [0.3.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.2.1...v0.3.0) (2021-08-25)
+
+### Features
+
+- add response headers ([07a106a](https://github.com/Jesse0Michael/testhelpers/commit/07a106a2461a8503a769df7177aa1ac25ca25d40))
+
+### Other
+
+- Merge pull request #1 from Jesse0Michael/headers ([7640fa9](https://github.com/Jesse0Michael/testhelpers/commit/7640fa9274ca0d92e5530b59ca437c3305da5eba)), closes [#1](https://github.com/Jesse0Michael/testhelpers/issues/1)
+
 ## [0.2.1](https://github.com/Jesse0Michael/testhelpers/compare/v0.2.0...v0.2.1) (2021-07-30)
 
 ### Bug Fixes
