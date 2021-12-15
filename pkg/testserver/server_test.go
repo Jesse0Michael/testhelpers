@@ -5,29 +5,7 @@ import (
 	"io/ioutil"
 	"net/http"
 	"testing"
-
-	"github.com/jesse0michael/testhelpers/pkg/testhelpers"
 )
-
-func ExampleHandler_serve() {
-	testServer := Handler{Response: testhelpers.LoadFile(&testing.T{}, "testdata/identity.json")}.Serve()
-	defer testServer.Close()
-
-	resp, err := http.Get(testServer.URL)
-	if err != nil {
-		fmt.Println(err)
-	}
-	b, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(string(b))
-	// Output:
-	// {
-	//     "id": "1a",
-	//     "type": "hero"
-	// }
-}
 
 func ExampleServer() {
 	testServer := New(Handler{Status: http.StatusCreated, Response: []byte("success")},
@@ -99,5 +77,18 @@ func TestServer_handle(t *testing.T) {
 			}
 		}
 		resp.Body.Close()
+	}
+}
+
+func TestServer_handle_empty(t *testing.T) {
+	testServer := New()
+	defer testServer.Close()
+
+	resp, err := http.Get(testServer.URL)
+	if err != nil {
+		t.Errorf("Unexpected server response failure = %v", err)
+	}
+	if resp.StatusCode != http.StatusServiceUnavailable {
+		t.Errorf("Handler.Serve().Status = %v, want %v", resp.StatusCode, http.StatusServiceUnavailable)
 	}
 }
