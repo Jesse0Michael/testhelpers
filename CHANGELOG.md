@@ -1,3 +1,9 @@
+# [0.4.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.3.0...v0.4.0) (2021-12-15)
+
+### Features
+
+- Handlers RoundTrip Implementation ([d117aac](https://github.com/Jesse0Michael/testhelpers/commit/d117aac251c0c147731829ea12cbd85615f62b13))
+
 # [0.3.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.2.1...v0.3.0) (2021-08-25)
 
 ### Features
