@@ -1,3 +1,13 @@
+## [0.4.1](https://github.com/Jesse0Michael/testhelpers/compare/v0.4.0...v0.4.1) (2021-12-15)
+
+### Continuous Integration
+
+- test with go 1.17 ([da58e5a](https://github.com/Jesse0Michael/testhelpers/commit/da58e5ace7ccceb3080d5e67c696c9a6d0232c4c))
+
+### Other
+
+- Merge branch 'master' of ssh://github.com/Jesse0Michael/testhelpers ([938b384](https://github.com/Jesse0Michael/testhelpers/commit/938b3848d3b9251a84709f4e2d63abfd71401454))
+
 # [0.4.0](https://github.com/Jesse0Michael/testhelpers/compare/v0.3.0...v0.4.0) (2021-12-15)
 
 ### Features
